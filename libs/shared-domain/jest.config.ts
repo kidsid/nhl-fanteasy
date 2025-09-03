@@ -1,10 +1,10 @@
 export default {
   displayName: 'shared-domain',
-  preset: '../jest.preset.js',
+  preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../coverage/shared-domain',
+  coverageDirectory: '../../coverage/libs/shared-domain',
 };

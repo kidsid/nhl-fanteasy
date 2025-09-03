@@ -7,7 +7,7 @@ router.get('/yahoo/login', (req, res) => {
 });
 
 router.get('/yahoo/callback', (req, res) => {
-  res.status(501).json({ message: 'Yahoo OAuth2 callback not implemented yet.' });
+  res
+    .status(501)
+    .json({ message: 'Yahoo OAuth2 callback not implemented yet.' });
 });
-
-

@@ -17,5 +17,3 @@ router.get('/:id', (req, res) => {
   }
   return res.json({ player });
 });
-
-
