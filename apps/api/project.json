@@ -37,7 +37,9 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "api:build",
-        "runBuildTargetDependencies": false
+        "runBuildTargetDependencies": false,
+        "inspect": false,
+        "runtimeArgs": []
       },
       "configurations": {
         "development": {
