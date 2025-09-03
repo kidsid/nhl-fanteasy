@@ -12,7 +12,7 @@
       "options": {
         "outputPath": "dist/apps/web",
         "browser": "apps/web/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/web/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
@@ -22,11 +22,7 @@
           }
         ],
         "styles": ["apps/web/src/styles.scss"],
-        "server": "apps/web/src/main.server.ts",
-        "ssr": {
-          "entry": "apps/web/src/server.ts"
-        },
-        "outputMode": "server"
+        "outputMode": "static"
       },
       "configurations": {
         "production": {
@@ -66,6 +62,7 @@
       "defaultConfiguration": "development",
       "dependsOn": ["api:serve"],
       "options": {
+        "port": 4200,
         "proxyConfig": "apps/web/proxy.conf.json"
       }
     },
@@ -94,6 +91,14 @@
         "port": 4200,
         "staticFilePath": "dist/apps/web/browser",
         "spa": true
+      },
+      "dependsOn": ["web:post-build"]
+    },
+    "post-build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cp dist/apps/web/browser/index.html dist/apps/web/browser/404.html",
+        "dependsOn": ["web:build"]
       }
     }
   }
