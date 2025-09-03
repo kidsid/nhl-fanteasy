@@ -5,6 +5,14 @@ dist
 tmp
 out-tsc
 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+/.venv/
+pip-wheel-metadata/
+
 # dependencies
 node_modules
 

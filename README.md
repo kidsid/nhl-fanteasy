@@ -4,10 +4,10 @@ Monorepo for Angular web app, Express API, and Python ranker service focused on 
 
 ## Structure
 
-- `web`: Angular app (SSR) to connect Yahoo league and display rankings/suggestions
-- `api`: Express API for Yahoo OAuth2 and data endpoints
-- `shared-domain`: Shared TypeScript models used by `web` and `api`
-- `python/ranker`: Python package for custom rankings and AI suggestions
+- `apps/web`: Angular app (SSR) to connect Yahoo league and display rankings/suggestions
+- `apps/api`: Express API for Yahoo OAuth2 and data endpoints
+- `libs/shared-domain`: Shared TypeScript models used by `web` and `api`
+- `apps/ai`: Python package for custom rankings and AI suggestions
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Monorepo for Angular web app, Express API, and Python ranker service focused on 
 
 Optional Python setup:
 ```bash
-cd python
+cd apps/ai
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e ranker
